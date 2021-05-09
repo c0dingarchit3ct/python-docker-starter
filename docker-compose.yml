@@ -1,0 +1,14 @@
+version: "3"
+services:
+  api:
+    image: python-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: python-dev-container
+    volumes:
+      - "./src:/sourcecode"
+    # networks:
+    #   - mymac
+    # ports:
+    #   - "3001:3000"
